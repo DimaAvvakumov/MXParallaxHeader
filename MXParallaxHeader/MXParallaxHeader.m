@@ -208,10 +208,13 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     CGFloat minimumHeight = MIN(self.minimumHeight, self.height);
     CGFloat relativeYOffset = self.height - self.scrollView.contentOffset.y - self.scrollView.contentInset.top;
     
+    CGFloat w = self.scrollView.frame.size.width;
+    if (w < 320.0) w = 320.0;
+    
     self.contentView.frame = (CGRect){
         .origin.x       = 0,
         .origin.y       = -relativeYOffset,
-        .size.width     = self.scrollView.frame.size.width,
+        .size.width     = w,
         .size.height    = MAX(relativeYOffset, minimumHeight)
     };
 }
