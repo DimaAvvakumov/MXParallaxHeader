@@ -24,7 +24,7 @@
 #import "MXParallaxHeader.h"
 
 @interface MXParallaxView : UIView
-@property (nonatomic,weak) MXParallaxHeader *parent;
+@property (nonatomic,strong) MXParallaxHeader *parent;
 @end
 
 @implementation MXParallaxView
