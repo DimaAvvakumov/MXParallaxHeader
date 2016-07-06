@@ -45,7 +45,7 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
 @end
 
 @interface MXParallaxHeader ()
-@property (nonatomic,weak) UIScrollView *scrollView;
+@property (nonatomic,strong) UIScrollView *scrollView;
 @end
 
 @implementation MXParallaxHeader {
